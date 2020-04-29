@@ -4,7 +4,8 @@ const api = require("./api");
 // CHALLENGE ONE
 function addReposToUser(user) {
   // REPLACE THIS WITH YOUR CODE
-  return {};
+  const userRepos = api.getRepos(user.id).then((repos) => user.repos = repos);
+  return user;
 }
 
 // don't change this function!
